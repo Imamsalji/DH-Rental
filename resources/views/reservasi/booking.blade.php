@@ -7,6 +7,12 @@
             <p>note: data di bawah adalah data yang sudah melakukan pembayaran</p>
         </div>
         <div class="card-content">
+            @if (session('success'))
+                <div class="alert alert-success alert-dismissible show fade">
+                    {{ session('success') }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            @endif
             <!-- table striped -->
             <div class="table-responsive datatable-minimal">
                 <table class="table" id="table2">

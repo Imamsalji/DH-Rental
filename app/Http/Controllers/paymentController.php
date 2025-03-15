@@ -83,6 +83,14 @@ class paymentController extends Controller
         return view('booking.payment', compact('token'));
     }
 
+    public function simulasi($token)
+    {
+        Rental::where('token', $token)->update([
+            'status' => 'paid'
+        ]);
+        return redirect()->route('booking')->with('success', 'Pembayaran berhasil diproses.');
+    }
+
     public function reservasi()
     {
         $rental = Rental::where('user_id', Auth::id())->where('status', 'notpaid')->get();

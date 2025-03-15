@@ -44,7 +44,7 @@ class AuthController extends Controller
         ]);
 
         if (Auth::attempt($request->only('email', 'password'))) {
-            return redirect()->route('dashboard');
+            return redirect()->route('list');
         }
 
         return back()->withErrors(['email' => 'Email atau password salah.']);

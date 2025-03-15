@@ -15,6 +15,10 @@
             <div class="card-content ">
                 <div id="snap-container"></div>
             </div>
+            <br>
+            <a href="/simulasi/{{ $token }}" class='btn btn-outline-danger'>
+                <span>Klik untuk simulasi Dibayarkan</span>
+            </a>
         </center>
 
     </div>

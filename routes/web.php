@@ -42,4 +42,5 @@ Route::middleware('auth')->group(function () {
     Route::get('/halPayment/{id}', [paymentController::class, 'halPayment'])->name('halPayment');
     Route::post('/payment/{id}', [paymentController::class, 'paymentStore'])->name('payment');
     Route::get('/halPayout/{token}', [paymentController::class, 'halTransaksi'])->name('halPayout');
+    Route::get('/simulasi/{token}', [paymentController::class, 'simulasi'])->name('simulasi');
 });

@@ -105,7 +105,9 @@
                         <li class="sidebar-item {{ request()->segment(2) == 'stok' ? 'active' : '' }}">
                             <form action="{{ route('logout') }}" method="POST">
                                 @csrf
-                                <a type="submit" class='sidebar-link'>Logout</a>
+                                <div class="form-actions d-flex justify-content-center">
+                                    <button type="submit" class='btn btn-outline-danger'>Logout</button>
+                                </div>
                             </form>
                         </li>
                     </ul>

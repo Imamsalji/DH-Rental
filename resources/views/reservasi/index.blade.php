@@ -1,19 +1,17 @@
 @extends('layouts.app')
-@section('title', 'Booking')
+@section('title', 'Reservasi')
 @section('content')
     <div class="card">
         <div class="card-header">
-            <h4 class="card-title">Data Booking</h4>
+            <h4 class="card-title">Data reservasi</h4>
         </div>
         <div class="card-content">
-            {{-- <div class="alert alert-danger alert-dismissible show fade">
-                This is a danger alert.
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-            <div class="alert alert-success alert-dismissible show fade">
-                This is a success alert.
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div> --}}
+            @if (session('success'))
+                <div class="alert alert-success alert-dismissible show fade">
+                    {{ session('success') }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            @endif
             <!-- table striped -->
             <div class="table-responsive datatable-minimal">
                 <table class="table" id="table2">
